@@ -2,17 +2,14 @@
 
 ## Table of Contents
 
-* <p><a href='#directives'>Directives</a></p>
-* <p><a href='#scope'>Scope</a></p>
-* <p><a href='#service'>Service</a></p>
-* <p><a href='#filter'>Filter</a></p>
-* <p><a href='#module'>Module</a></p>
+* <a href='#directives'>Directives</a>
+* <a href='#scope'>Scope</a>
+* <a href='#service'>Service</a>
+* <a href='#filter'>Filter</a>
+* <a href='#module'>Module</a>
 
 
-
-# Basic concepts AngularJS
-
-<p><a name='directives'>Directives</a></p>
+### <a name='directives'>Directives</a>
 
 We use directives for almost declarative tasks.At a high level, directives are markers on a DOM element (such as an attribute, element name, or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element or even transform the DOM element and its children.
 
@@ -30,7 +27,7 @@ Prefer using directives via tag name and attributes over comment and class names
 
 For more details: http://docs.angularjs.org/guide/directive 
 
-<p><a name='scope'>Scope</a></p>
+### <a name='scope'>Scope</a>
 
 Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events
 
@@ -40,7 +37,7 @@ Both controllers and directives have reference to the scope, but not to each oth
 
 For more details: http://docs.angularjs.org/guide/scope
 
-<p><a name='service'>Services</a></p>
+### <a name='service'>Services</a>
 
 Angular services are singletons objects or functions that carry out specific tasks common to web apps. Angular has a number of built in services, such as the $http service, which provides access to the browser's XMLHttpRequest object for making requests to a server. You can also create your own custom services.
 
@@ -51,7 +48,7 @@ Sample, where declare service cartService with two dependencies- $http and login
 
 For more details: http://docs.angularjs.org/guide/dev_guide.services.understanding_services
 
-<p><a name='filter'>Filters</a></p>
+### <a name='filter'>Filters</a>
 
 A filter formats the value of an expression for display to the user. They can be used in view templates, controllers or services and it is easy to define your own filter.
 
@@ -71,7 +68,7 @@ Filters may have arguments. The syntax for this is: {{ expression | filter:argum
 
 For more details: http://docs.angularjs.org/guide/filter
 
-<p><a name='module'>Module</a></p>
+### <a name='module'>Module</a>
 
 Angular apps don't have a main method. Instead modules declaratively specify how an application should be bootstrapped. 
 
