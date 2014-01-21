@@ -18,7 +18,7 @@ So how can we use this servise and what properties does it have?
 
 Just imagine we want to send request  and get all information about our customers. 
 #### For this case we need write:
-
+'''html
 $http({method: 'GET', url: '/customers'}).
   success(function(data, status, headers, config) {
     // this callback will be called asynchronously
@@ -30,7 +30,7 @@ $http({method: 'GET', url: '/customers'}).
     // or server returns response with an error status.
     console.log(error, status);
   });
-
+'''
 
 #### OR (simple form)
 
@@ -63,7 +63,7 @@ $http.get('/customers').success(function(data, status, headers, config) {
 * transformResponse – {function(data, headersGetter)|Array.<function(data, headersGetter)>} – transform function or an array of such functions. The transform function takes the http response body and headers and returns its transformed (typically deserialized) version.
 * cache – {boolean|Cache} – If true, a default $http cache will be used to cache the GET request, otherwise if a cache instance built with $cacheFactory, this cache will be used for caching.
 * timeout – {number|Promise} – timeout in milliseconds, or promise that should abort the request when resolved.
-* withCredentials - {boolean} - whether to to set the withCredentials flag on the XHR object. See requests with credentials for more information.
+* withCredentials - {boolean} - whether to to set the withCredentials flag on the XHR object.
 * responseType - {string} - see requestType.
 
 #### All shortcut methods are:
@@ -74,6 +74,7 @@ $http.get('/customers').success(function(data, status, headers, config) {
 * $http.delete
 * $http.jsonp
 
+#### Details information you can find: http://docs.angularjs.org/api/ng.$http
 
 ### <a name='resource'>$resource service</a>
 
