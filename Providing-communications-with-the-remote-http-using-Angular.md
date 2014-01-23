@@ -5,8 +5,7 @@
 * <a href='#http'>$http service</a>
 
 ## $http API is based on
-* <a href='#deferred'>deferred</a>
-* <a href='#promise'>promise</a>
+* <a href='#deferred'>Deferred & Promice</a>
 
 ### <a name='http'>$http service</a>
 
@@ -73,7 +72,7 @@ Just imagine we want to send request  and get all information about our customer
 
 #### Details information you can find: http://docs.angularjs.org/api/ng.$http
 
-### <a name='deferred'>deferred</a>
+### <a name='deferred'>Deferred & Promice</a>
 
 As I said later $http API is based on the deferred/promise APIs exposed by the $q service. Lets talk about these.
 
