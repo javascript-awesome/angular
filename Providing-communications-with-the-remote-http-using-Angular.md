@@ -76,5 +76,27 @@ Just imagine we want to send request  and get all information about our customer
 
 As I said later $http API is based on the deferred/promise APIs exposed by the $q service. Lets talk about these.
 
-Idea of Deferred objects was taken from Kris Kowal's library <a href='https://github.com/kriskowal/q'>Q</a>. Its essence lies in the fact that if function can't return object without blocking, it returns Promice object. This object will observe the result of the function. When we receive returns object orr error, Deferred object will show us this.
+Idea of Deferred objects was taken from Kris Kowal's library <a href='https://github.com/kriskowal/q'>Q</a>. Its essence lies in the fact that if function can't return object without blocking, it returns Promice object. This object will observe the result of the function. When we receive returns object or error, Deferred object will show us this.
+
+A new instance of deferred is constructed by calling $q.defer().
+
+#### Methods
+
+* resolve(value) – resolves the derived promise with the value. If the value is a rejection constructed via $q.reject, the promise will be rejected instead.
+* reject(reason) – rejects the derived promise with the reason. This is equivalent to resolving it with a rejection constructed via $q.reject.
+* notify(value) - provides updates on the status of the promises execution. This may be called multiple times before the promise is either resolved or rejected.
+
+#### Deferred properties is:
+
+Promise – promice object associated with this deferred.
+These is an object which contains the result of operations, that we don't know when will finish.
+The purpose of the promise object is to allow for interested parties to get access to the result of the deferred task when it completes.
+
+A new promise instance is created when a deferred instance is created and can be retrieved by calling deferred.promise.
+
+#### Methods
+
+* then(successCallback, errorCallback, notifyCallback) – regardless of when the promise was or will be resolved or rejected, then calls one of the success or error callbacks asynchronously as soon as the result is available. The callbacks are called with a single argument: the result or rejection reason. Additionally, the notify callback may be called zero or more times to provide a progress indication, before the promise is resolved or rejected.
+This method returns a new promice which is resolved or rejected via the return value of the successCallback, errorCallback. It also notifies via the return value of the notifyCallback method. The promice can not be resolved or rejected from the notifyCallback method.
+
 
