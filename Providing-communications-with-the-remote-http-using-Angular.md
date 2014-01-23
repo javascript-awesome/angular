@@ -18,29 +18,27 @@ So how can we use this servise and what properties does it have?
 
 Just imagine we want to send request  and get all information about our customers. 
 #### For this case we need write:
-'''html
-$http({method: 'GET', url: '/customers'}).
-  success(function(data, status, headers, config) {
-    // this callback will be called asynchronously
-    // when the response is available
-    console.log(data);
-  }).
-  error(function(error, status, headers, config) {
-    // called asynchronously if an error occurs
-    // or server returns response with an error status.
-    console.log(error, status);
-  });
-'''
+
+    $http({method: 'GET', url: '/customers'}).success(function(data, status, headers, config) {
+      // this callback will be called asynchronously
+      // when the response is available
+      console.log(data);
+    }).
+    error(function(error, status, headers, config) {
+      // called asynchronously if an error occurs
+      // or server returns response with an error status.
+      console.log(error, status);
+    });
+
 
 #### OR (simple form)
 
-$http.get('/customers').success(function(data, status, headers, config) {
-    console.log(data);
-  }).
-  error(function(error, status, headers, config) {
-    console.log(error, status);
-  }
-);
+    $http.get('/customers').success(function(data, status, headers, config) { 
+      console.log(data);
+    }).
+    error(function(error, status, headers, config) {
+      console.log(error, status);
+    });
 
 #### Where returned object consists:
 
