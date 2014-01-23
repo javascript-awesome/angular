@@ -1,9 +1,8 @@
 # Providing communications with the remote HTTP using Angular
 
-## For providing communications with the remote HTTP servers angular has several methods:
+## For providing communications with the remote HTTP servers angular has method:
 
 * <a href='#http'>$http service</a>
-* <a href='#resource'>$resource service</a>
 
 ## $http API is based on
 * <a href='#deferred'>deferred</a>
@@ -74,5 +73,9 @@ Just imagine we want to send request  and get all information about our customer
 
 #### Details information you can find: http://docs.angularjs.org/api/ng.$http
 
-### <a name='resource'>$resource service</a>
+### <a name='deferred'>deferred</a>
+
+As I said later $http API is based on the deferred/promise APIs exposed by the $q service. Lets talk about these.
+
+Idea of Deferred objects was taken from Kris Kowal's library <a href='https://github.com/kriskowal/q'>Q</a>. Its essence lies in the fact that if function can't return object without blocking, it returns Promice object. This object will observe the result of the function. When we receive returns object orr error, Deferred object will show us this.
 
