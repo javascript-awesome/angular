@@ -4,12 +4,18 @@ Recommendations and guidelines for implementing AngularJS MVW (Model View Whatev
 
 ## Table of Contents
 
-* Preface
-* Controller
-* Scope
-* Model
-	* Model Implementation
-	* Creating new instances
+* [Preface] (#preface)
+* [Controller] (#controller)
+* [Scope] (#scope)
+* [Model] (#model)
+	* [Model Implementation] (#model-implementation)
+	* [Creating new instances] (#creating-new-instances)
+	* [Global Model](#global-model)
+* [Resource] (#resource)
+	* [Resource Implementation] (resource-implementation)
+* [Services] (#services)
+* [Client-Side Structure] (#client-side-structure)
+
 
 
 ##Preface
