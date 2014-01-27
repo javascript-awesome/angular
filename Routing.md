@@ -2,6 +2,7 @@
 
 * <a href='#Syntax'>Syntax to add Routing</a>
 * <a href='#Parameters'>How to pass Parameters in Route Urls</a>
+* <a href='CustomData'>Add Custom Data to RouteProvider</a>
 
 In this article we will go through the next useful feature of AngularJS called Routing. 
 Dividing it in Views and using Routing to load different part of app helps in logically dividing the app and making it more manageable.
@@ -49,10 +50,33 @@ And we can read the parameter in ShowOrderController by using $routeParams.order
         $scope.order_id = $routeParams.orderId;
         ...
 
+### <a name='CustomData'>Add Custom Data to RouteProvider</a>
+
+The $routeProvider provides methods when() and otherwise() which we used to define url routes. Sometime we might want to pass custom data based on certain route. For example you might use same Controller in different routes and use some custom data. For example:
+
+        when('/AddNewOrder', {
+          templateUrl: 'templates/add_order.html',
+          controller: 'CommonController',
+          foodata: 'addorder'
+        }).
+        when('/ShowOrders', {
+          templateUrl: 'templates/show_orders.html',
+          controller: 'CommonController',
+          foodata: 'showorders'
+        });
+ 
+        sampleApp.controller('CommonController', function($scope, $route) {
+          //access the foodata property using $route.current
+          var foo = $route.current.foodata;
+          alert(foo);
+        });
+In above code we defined a new property “foodata” while defining route. This property is then accessed in controller using $route.current.foodata.
+
 ### For deatils info look at:
 
 * http://docs.angularjs.org/tutorial/step_07
 * http://docs.angularjs.org/api/ngRoute.$route
+* http://www.bennadel.com/blog/2420-Mapping-AngularJS-Routes-Onto-URL-Parameters-And-Client-Side-Events.htm
 
 
 
