@@ -2,7 +2,7 @@
 
 * <a href='#Syntax'>Syntax to add Routing</a>
 * <a href='#Parameters'>How to pass Parameters in Route Urls</a>
-* <a href='CustomData'>Add Custom Data to RouteProvider</a>
+* <a href='#CustomData'>Add Custom Data to RouteProvider</a>
 
 In this article we will go through the next useful feature of AngularJS called Routing. 
 Dividing it in Views and using Routing to load different part of app helps in logically dividing the app and making it more manageable.
