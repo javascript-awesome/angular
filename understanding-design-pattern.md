@@ -320,6 +320,8 @@ Good example of angular application structuring is implemented by *angular-app* 
 
 This is also considered by modern application generators - https://github.com/yeoman/generator-angular/issues/109
 
+There is also a best practices video related to modules structuring in angular applications presented by official AngularJS YouTube channel - http://www.youtube.com/watch?v=ZhfUv0spHCY&feature=share&t=35m42s 
+
 [1]: http://en.wikipedia.org/wiki/Representational_State_Transfer
 [2]: http://docs.angularjs.org/api/ng.$http
 [3]: http://docs.angularjs.org/guide/di
