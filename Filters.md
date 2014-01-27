@@ -33,7 +33,7 @@ Or you can create yout own filter you should write something like this:
         });
 
 
-### For deatils info look at:
+### For details info look at:
 
 * http://docs.angularjs.org/guide/filter
 * http://docs.angularjs.org/tutorial/step_09
