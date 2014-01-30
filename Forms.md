@@ -12,7 +12,7 @@ The key directive in understanding two-way data-binding is ngModel. The ngModel 
 
 Since the role of forms in client-side Angular applications is different than in classical roundtrip apps, it is desirable for the browser not to translate the form submission into a full page reload that sends the data to the server. Instead some javascript logic should be triggered to handle the form submission in an application-specific way.
 
-For this reason, Angular prevents the default action (form submission to the server) unless the <form> element has an action attribute specified.
+For this reason, Angular prevents the default action (form submission to the server) unless the "form" element has an action attribute specified.
 
 You can use one of the following two ways to specify what javascript method should be called when a form is submitted:
 
@@ -22,8 +22,8 @@ You can use one of the following two ways to specify what javascript method shou
 To prevent double execution of the handler, use only one of the ngSubmit or ngClick directives. This is because of the following form submission rules in the HTML specification:
 
 * If a form has only one input field then hitting enter in this field triggers form submit (ngSubmit)
-* if a form has 2+ input fields and no buttons or input[type=submit] then hitting enter doesn't trigger submit
-* if a form has one or more input fields and one or more buttons or input[type=submit] then hitting enter in any of the input fields will trigger the click handler on the first button or input[type=submit] (ngClick) and a submit handler on the enclosing form (ngSubmit)
+* if a form has 2+ input fields and no buttons or (input[type=submit]) then hitting enter doesn't trigger submit
+* if a form has one or more input fields and one or more buttons or (input[type=submit]) then hitting enter in any of the input fields will trigger the click handler on the first button or (input[type=submit]) (ngClick) and a submit handler on the enclosing form (ngSubmit)
 
 #### Parameters
 * <b>Name</b> of the form. If specified, the form controller will be published into related scope, under this name.
