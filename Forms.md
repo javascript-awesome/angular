@@ -30,14 +30,14 @@ To prevent double execution of the handler, use only one of the ngSubmit or ngCl
 
 #### Sample
 
-<form novalidate class="simple-form">
-  Name: <input type="text" ng-model="user.name" /><br />
-  E-mail: <input type="email" ng-model="user.email" /><br />
-  Gender: <input type="radio" ng-model="user.gender" value="male" />male
-  <input type="radio" ng-model="user.gender" value="female" />female<br />
-  <button ng-click="reset()">RESET</button>
-  <button ng-click="update(user)">SAVE</button>
-</form>
+    <form novalidate class="simple-form">
+      Name: <input type="text" ng-model="user.name" /><br />
+      E-mail: <input type="email" ng-model="user.email" /><br />
+      Gender: <input type="radio" ng-model="user.gender" value="male" />male
+      <input type="radio" ng-model="user.gender" value="female" />female<br />
+      <button ng-click="reset()">RESET</button>
+      <button ng-click="update(user)">SAVE</button>
+    </form>
 
 So
 
@@ -51,35 +51,36 @@ So
 In Angular forms can be nested. This means that the outer form is valid when all of the child forms are valid as well. However, browsers do not allow nesting of <form> elements, so Angular provides the ngForm directive which behaves identically to <form> but can be nested. 
 
 Form properties:
-* myForm.myInput.$valid - is set "true" if element "myInput" is valid
-* myForm.myInput.$error - show all "myInput"'s errors
-* myForm.$invalid - is set "true" if the form is invalid
-* myForm.$error.required - show false if all required fields are filled
+* <b>myForm.myInput.$valid</b> - is set "true" if element "myInput" is valid
+* <b>myForm.myInput.$error</b> - show all "myInput"'s errors
+* <b>myForm.$invalid</b> - is set "true" if the form is invalid
+* <b>myForm.$error.required</b> - show false if all required fields are filled
 
 #### Sample
 
-<form name="form" class="css-form" novalidate>
-  Name: <input type="text" ng-model="user.name" name="uName" required /><br />
-  E-mail: <input type="email" ng-model="user.email" name="uEmail" required/><br />
-  <div ng-show="form.uEmail.$dirty && form.uEmail.$invalid">Invalid:
-    <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
-    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
-  </div>
-  Gender: <input type="radio" ng-model="user.gender" value="male" />male
-  <input type="radio" ng-model="user.gender" value="female" />female
-  <button ng-click="reset()">RESET</button>
-  <button ng-click="update(user)" ng-disabled="form.$invalid">SAVE</button>
-</form>
+    <form name="form" class="css-form" novalidate>
+       Name: <input type="text" ng-model="user.name" name="uName" required /><br />
+       E-mail: <input type="email" ng-model="user.email" name="uEmail" required/><br />
+       <div ng-show="form.uEmail.$dirty && form.uEmail.$invalid">Invalid:
+         <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+         <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+       </div>
+       Gender: <input type="radio" ng-model="user.gender" value="male" />male
+       <input type="radio" ng-model="user.gender" value="female" />female
+       <button ng-click="reset()">RESET</button>
+       <button ng-click="update(user)" ng-disabled="form.$invalid">SAVE</button>
+    </form>
 
 So
 
 * <b>form.$invalid</b> - we use form name to check is all her components valid;
 * <b>name="uName" & name="uEmail"</b> - we put name to components in case to check separatly their valid like: 
- <div ng-show="form.uEmail.$dirty && form.uEmail.$invalid">Invalid:
-    <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
-    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
-  </div>
-
+```
+<div ng-show="form.uEmail.$dirty && form.uEmail.$invalid">Invalid:
+   <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+   <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+</div>
+```
 ### For deatils info look at:
 
 * http://docs.angularjs.org/guide/forms
