@@ -1,5 +1,6 @@
 # AngularJS
 
+[![Gitter](https://badges.gitter.im/javascript-awesome/angular.svg)](https://gitter.im/javascript-awesome/angular?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Titles
 
